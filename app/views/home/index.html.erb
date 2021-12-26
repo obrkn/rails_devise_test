@@ -1,0 +1,6 @@
+<p>hello, world!</p>
+<% if user_signed_in? %>
+  <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to 'LOGIN', new_user_session_path, method: :get %></li>
+<% end %>
